@@ -78,6 +78,7 @@ if not st.session_state.df.empty:
                 msg = f"مرحباً سيد {row['الاسم']}، نود تذكيرك بأن اشتراك الإنترنت الخاص بك سينتهي بتاريخ {row['تاريخ الانتهاء']}. يرجى التجديد لضمان استمرار الخدمة."
                 encoded_msg = urllib.parse.quote(msg)
                 whatsapp_url = f"https://wa.me{row['رقم الهاتف']}?text={encoded_msg}"
+
                 
                 # زر يفتح الواتساب مباشرة
                 st.link_button("💬 تنبيه", whatsapp_url)
